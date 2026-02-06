@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainMenu from './MainMenu';
 import CrudMenu from './CrudMenu';
-import './App.css';
+import '../CSS/App.css';
 
 function App() {
   return (

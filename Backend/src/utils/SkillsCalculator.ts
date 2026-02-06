@@ -6,24 +6,19 @@ export let skillsData: Record<string, any[]> = {};
 const resourcesPath = path.resolve('src/resources/skillsTable.json');
 export async function initSkillCalculator() {
     try {
-        //Intentamos cojer los niveles si ya estan cargados
         const localData = await fs.readFile(resourcesPath, 'utf-8').catch(() => null);
         if (localData) {
             skillsData = JSON.parse(localData);
             console.log("Tablas de skills cargadas desde recursos locales.");
             return;
         }
-        //En caso de no estar cargados los cargamos desde la api de hypixel
         console.log("Descargando todas las tablas de skills desde Hypixel API...");
         const response = await axios.get("https://api.hypixel.net/v2/resources/skyblock/skills");
         const apiSkills = response.data.skills;
-        
-        /* Mapeamos cada skill a su array de niveles especifico */
+
         for (const skillName in apiSkills) {
             skillsData[skillName.toLowerCase()] = apiSkills[skillName].levels;
         }
-
-        /* 3. Guardado en la carpeta de recursos segun requisitos de la practica */
         await fs.mkdir(path.dirname(resourcesPath), { recursive: true });
         await fs.writeFile(resourcesPath, JSON.stringify(skillsData, null, 2));
         

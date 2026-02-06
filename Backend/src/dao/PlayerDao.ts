@@ -49,9 +49,12 @@ export class PlayerDAO {
     async updatePlayer(uuid: string, updateData: any) {
         const player = await PlayerModel.findOne({ uuid: uuid });
         if (!player) return null;
+        console.log(player.username)
         Object.keys(updateData).forEach(key => {
+            console.log(key) 
             player.set(key, updateData[key]);
         });
+        console.log(player.miningXP)
         return await player.save();
     }
 }

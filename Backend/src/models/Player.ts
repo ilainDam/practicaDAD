@@ -1,5 +1,4 @@
 import { Schema, model } from 'mongoose';
-// Importamos las funciones de cálculo real
 import { getLevelFromXP, getXPFromLevel } from "../utils/SkillsCalculator"; 
 
 const playerSchema = new Schema({
