@@ -1,5 +1,5 @@
 Iniciar BackEnd: npx tsx src/server.ts
-Iniciar FrontEnd: 
+Iniciar FrontEnd: npm run dev
 
 Dependencias BackEnd:
 
