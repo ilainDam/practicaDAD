@@ -1,0 +1,16 @@
+Iniciar BackEnd: npx tsx src/server.ts
+Iniciar FrontEnd: 
+
+Dependencias BackEnd:
+
+cd Backend
+npm install
+npm install express mongoose dotenv cors axios
+npm install @types/express @types/cors @types/node -D
+npm install tsx nodemon -D
+
+Dependencias FrontEnd:
+
+cd Frontend
+npm install
+npm install react-router-dom axios

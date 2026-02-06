@@ -1,0 +1,207 @@
+/* Reset básico */
+:root {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Botones */
+button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #0078d4;
+    color: white;
+}
+
+button:hover {
+    background: #106ebe;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: #d13438;
+}
+
+.btn-update {
+    background: #107c10;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-back {
+    background: #555;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.btn-block {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 15px;
+    background: #5c2d91;
+}
+
+/* Inputs y Selects */
+input,
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background: #333;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.uuid-input {
+    font-family: monospace;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    border: 1px solid #0078d4;
+}
+
+/* Layout del CRUD */
+.crud-container {
+    padding: 20px;
+}
+
+.control-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.panel-section {
+    background: #2d2d2d;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+.panel-section h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+    color: #61dafb;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.btn-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.update-form {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.update-form input,
+.update-form select {
+    margin-bottom: 8px;
+}
+
+/* Resultados (Tarjetas) */
+.results-area {
+    border-top: 2px dashed #444;
+    padding-top: 20px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.result-card {
+    background: #252526;
+    border: 1px solid #3e3e42;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.card-header {
+    background: #333;
+    padding: 10px 15px;
+    border-bottom: 1px solid #444;
+}
+
+.uuid-text {
+    font-size: 0.75rem;
+    color: #888;
+    font-family: monospace;
+    word-break: break-all;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Estilos de Stats */
+.all-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    padding: 2px 0;
+}
+
+.stat-name {
+    color: #aaa;
+    text-transform: capitalize;
+}
+
+.stat-val b {
+    color: #4ec9b0;
+}
+
+.highlight-stat {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+    color: #ffeb3b;
+}
+
+.avg-card {
+    text-align: center;
+    border: 2px solid #0078d4;
+}
+
+.big-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #0078d4;
+}
